@@ -83,11 +83,11 @@ main footer section {
     gap: 0.5em;
 }
 
-main footer mark {
+main footer h2 {
     font-size: 1.3em;
     font-weight: 700;
+    margin: 0;
     color: var(--primary-heading-color);
-    background-color: transparent;
 }
 
 main footer span {
