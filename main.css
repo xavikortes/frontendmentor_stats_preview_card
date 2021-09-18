@@ -1,0 +1,125 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+
+    --bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+
+    --primary-heading-color: hsl(0, 0%, 100%);
+    --primary-color: hsla(0, 0%, 100%, 0.75);
+    --accent-color: hsl(277, 64%, 61%);
+    --alternative-h-color: hsla(0, 0%, 100%, 0.6);
+
+    --font-family: 'Red Hat Display', sans-serif;
+    --font-size: 15px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+strong {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main > * {
+    flex-basis: 50%;
+    flex-grow: 0;
+}
+
+main article {
+    padding: 6%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main article h1 {
+    margin: 0;
+    line-height: 1.3em;
+    font-size: 2.2em;
+    color: var(--primary-heading-color);
+}
+
+main article p {
+    line-height: 1.5em;
+}
+
+main footer {
+    margin-top: 50px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+main footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+main footer mark {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--primary-heading-color);
+    background-color: transparent;
+}
+
+main footer span {
+    font-size: 0.8em;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--alternative-h-color);
+}
+
+picture img {
+    filter: opacity(0.5) drop-shadow(0 0 0 var(--accent-color)) saturate(250%);
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 500px) {
+    main {
+        max-width: 90%;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    main article p {
+        line-height: 1.8em;
+        font-size: 1.2em;
+    }
+
+    main footer {
+        flex-direction: column;
+        font-size: 1.2em;
+    }
+
+    main footer section {
+        align-items: center;
+    }
+}
